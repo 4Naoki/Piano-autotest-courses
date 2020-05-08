@@ -7,7 +7,7 @@ import java.util.List;
 public class ListTask {
     public static void main(String[] args) {
 
-        String array[] = {"Слива", "Грецкий орех", "Инжир", "Груша", "Вишня", "Айва", "Абрикос", "Яблоня"};
+        String[] array = {"Слива", "Грецкий орех", "Инжир", "Груша", "Вишня", "Айва", "Абрикос", "Яблоня"};
 
         List<String> list = new ArrayList<>(Arrays.asList(array));
 
