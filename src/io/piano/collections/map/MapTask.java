@@ -1,7 +1,6 @@
 package io.piano.collections.map;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class MapTask {
     public static void main(String[] args) {
@@ -29,6 +28,26 @@ public class MapTask {
 
         System.out.println(map.containsKey(9));
         System.out.println(map.containsValue("Ноябрь"));
+
+//        Второе задание
+        String[] weekDays =
+                {"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"};
+        String[] yearSeasons =
+                {"Зима", "Весна", "Лето", "Осень"};
+
+        HashMap<String, ArrayList<String>> mapWithListAsValue =
+                new HashMap<String, ArrayList<String>>();
+
+        mapWithListAsValue.put("Дни", new ArrayList<>(Arrays.asList(weekDays)));
+        mapWithListAsValue.put("Сезоны", new ArrayList<>(Arrays.asList(yearSeasons)));
+
+        System.out.println();
+        Iterator<Map.Entry<String, ArrayList<String>>> iterator =
+                mapWithListAsValue.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, ArrayList<String>> entry = iterator.next();
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
     }
 
 }
