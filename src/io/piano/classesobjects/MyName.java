@@ -1,8 +1,9 @@
 package io.piano.classesobjects;
 
 public class MyName {
-    public String name;
-    public String surname;
+
+    String name;
+    String surname;
 
     public MyName(){
 
@@ -14,6 +15,13 @@ public class MyName {
 
     public void sayHello(String name, String surname) {
         System.out.println("Greetings, " + this.name + " " + this.surname + "!");
+    }
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
     }
 }
 
